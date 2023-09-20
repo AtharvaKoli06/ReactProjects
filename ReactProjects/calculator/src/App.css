@@ -1,0 +1,59 @@
+/* .App-logo {
+  height: 40vmin;
+  pointer-events: none;
+} */
+
+/* @media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+} */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: linear-gradient(to right, #aaa,#2ed, #333);
+  display: flex;
+  justify-content: center;
+}
+.calculate-grid {
+  display: grid;
+  justify-content: center;
+  margin-top: 2rem;
+  grid-template-columns: repeat(4, 6rem);
+  grid-template-rows: minmax(7rem, auto) repeat(5, 6rem);
+}
+.calculate-grid > button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px solid white;
+  outline: none;
+  background-color: rgba(255, 255, 255, .75);
+}
+.calculate-grid > button:hover, .calculate-grid > button:focus {
+  background-color: rgba(255, 255, 255, .9);
+}
+.span-two {
+  grid-column: span 2;
+}
+.output {
+  grid-column: 1 / -1;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.output .previous-operand {
+  color: rgb(193, 210, 225);
+  font-style: 1.5rem;
+  padding: .75rem;
+}
+.output .current-operand {
+  color: White;
+  font-size: 2.5rem;
+}
